@@ -26,6 +26,9 @@
         https://www.jianshu.com/p/f7b94599ffab
         https://github.com/alibaba/spring-cloud-alibaba/tree/master/spring-cloud-alibaba-examples
 
+        Spring Boot 配置文件的加载顺序，依次为 bootstrap.properties -> bootstrap.yml -> application.properties -> application.yml
+        其中 bootstrap.properties 配置为最高优先级
+
         依赖版本简介
 
         项目的最新版本是 2.1.0.RELEASE
