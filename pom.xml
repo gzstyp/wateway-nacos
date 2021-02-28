@@ -19,8 +19,6 @@
 
         spring-cloud-gateway整合nacos+整合Sentinel
 
-        本项目下的子模块，没有*.iml?
-
         已添加gateway路由网关模块,基于nacos服务发现组件,已接入Spring Cloud Alibaba 熔断(Sentinel)
 
         参考 https://www.jianshu.com/p/9a8d94c0c90c
