@@ -13,6 +13,9 @@ public class NacosProviderController{
     @Value("${server.port}")
     private String port;
 
+    @Value("${user.name}")
+    private String name;
+
     // 注入配置文件上下文
     @Autowired
     private ConfigurableApplicationContext applicationContext;
@@ -23,9 +26,9 @@ public class NacosProviderController{
         return "Hello Nacos Discovery " + message + " i am from port " + port;
     }
 
-    // 从上下文中读取配置,http://localhost:8081/test/hi
+    // 从上下文中读取配置,http://localhost:8088/hi
     @GetMapping(value = "/hi")
     public String sayHi() {
-        return "Hello " + applicationContext.getEnvironment().getProperty("user.name");
+        return "Hello 通过 @Value注解获取 " + name +",注意：通过注解获取的值是之前的值,想要拿到最新的值需要重启应用或通过applicationContext.getEnvironment().getProperty(\"user.name\")"+ applicationContext.getEnvironment().getProperty("user.name");
     }
 }
