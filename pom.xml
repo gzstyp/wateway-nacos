@@ -55,7 +55,7 @@
         return "Hello 通过 @Value注解获取 " + name +",注意：通过注解获取的值是之前的值,想要拿到最新的值需要重启应用
         或通过applicationContext.getEnvironment().getProperty(\"user.name\")"+ applicationContext.getEnvironment().getProperty("user.name");
 
-
+        Nacos Config 可以多环境的配置
     </description>
 
     <properties>
@@ -96,8 +96,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.75</version>
         </dependency>
     </dependencies>
     <!--打包配置,独立部署的都需要添加-->
