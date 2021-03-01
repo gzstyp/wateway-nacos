@@ -19,7 +19,7 @@ import java.util.Map;
  * 鉴权过滤器
  */
 @Component
-public class AuthFilter implements GlobalFilter, Ordered {
+public class AccessFilter implements GlobalFilter, Ordered {
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         final String token = exchange.getRequest().getQueryParams().getFirst("token");
