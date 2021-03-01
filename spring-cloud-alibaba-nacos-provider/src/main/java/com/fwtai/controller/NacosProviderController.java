@@ -26,7 +26,7 @@ public class NacosProviderController{
         return "Hello Nacos Discovery " + message + " i am from port " + port;
     }
 
-    // 从上下文中读取配置,http://localhost:8088/hi
+    // 从上下文中读取配置,http://localhost:8081/hi
     @GetMapping(value = "/hi")
     public String sayHi() {
         return "Hello 通过 @Value注解获取 " + name +",注意：通过注解获取的值是之前的值,想要拿到最新的值需要重启应用或通过applicationContext.getEnvironment().getProperty(\"user.name\")"+ applicationContext.getEnvironment().getProperty("user.name");
