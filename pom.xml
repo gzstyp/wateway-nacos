@@ -49,6 +49,13 @@
         随着微服务的流行，服务和服务之间的稳定性变得越来越重要。
         Sentinel 以流量为切入点，从流量控制、熔断降级、系统负载保护等多个维度保护服务的稳定性。
 
+        Spring Cloud Alibaba Nacos Config 是 Spring Cloud Config Server 和 Client 的替代方案
+
+        注意:
+        return "Hello 通过 @Value注解获取 " + name +",注意：通过注解获取的值是之前的值,想要拿到最新的值需要重启应用
+        或通过applicationContext.getEnvironment().getProperty(\"user.name\")"+ applicationContext.getEnvironment().getProperty("user.name");
+
+
     </description>
 
     <properties>
