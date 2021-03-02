@@ -56,6 +56,20 @@
         或通过applicationContext.getEnvironment().getProperty(\"user.name\")"+ applicationContext.getEnvironment().getProperty("user.name");
 
         Nacos Config 可以多环境的配置
+
+        参考 《千锋教育-Java微服务架构Spring Cloud Alibaba》
+        https://www.funtl.com/zh/spring-cloud-alibaba/#%E6%A6%82%E8%BF%B0
+
+        Seata 1.4.0 + nacos配置和使用
+        https://blog.csdn.net/qq853632587/article/details/111644295
+        https://zxbcw.cn/post/202333/
+        https://www.cnblogs.com/Zhang-Xiang/p/14435175.html
+
+        使用Sentinel熔断器防止服务雪崩;
+
+        分布式链路追踪不属于spring cloud alibaba的
+
+
     </description>
 
     <properties>
@@ -182,72 +196,4 @@
             </resource>
         </resources>
     </build>
-
-    <repositories>
-        <repository>
-            <id>aliyun-repos</id>
-            <name>Aliyun Repository</name>
-            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-
-        <repository>
-            <id>sonatype-repos</id>
-            <name>Sonatype Repository</name>
-            <url>https://oss.sonatype.org/content/groups/public</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>sonatype-repos-s</id>
-            <name>Sonatype Repository</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-
-        <repository>
-            <id>spring-snapshots</id>
-            <name>Spring Snapshots</name>
-            <url>https://repo.spring.io/snapshot</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>spring-milestones</id>
-            <name>Spring Milestones</name>
-            <url>https://repo.spring.io/milestone</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-
-    <pluginRepositories>
-        <pluginRepository>
-            <id>aliyun-repos</id>
-            <name>Aliyun Repository</name>
-            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
 </project>

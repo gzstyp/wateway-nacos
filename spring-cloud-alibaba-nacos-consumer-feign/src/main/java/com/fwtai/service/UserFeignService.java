@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 //通过 @FeignClient("服务名") 注解来指定调用哪个服务;在 Service 中@FeignClient注解增加 fallback 属性用来指定类,以 Sentinel 以流量为切入点，从流量控制、熔断降级、系统负载保护等多个维度保护服务的稳定性。
 @FeignClient(value = "nacos-provider", fallback = FallbackUserServiceImpl.class)
 public interface UserFeignService{
+
     @GetMapping(value = "/test/{message}")
     String test(@PathVariable("message") String message);
 }
